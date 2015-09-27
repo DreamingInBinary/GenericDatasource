@@ -27,7 +27,7 @@ class ViewController: UIViewController
         }
         
         //Tableview setup
-        tv.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+        tv.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tv.dataSource = dataSource
         tv.rowHeight = UITableViewAutomaticDimension
 

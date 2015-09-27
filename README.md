@@ -1,4 +1,4 @@
-![GenericDatasrouce](/pablo.png)
+![GenericDatasrouce](/pablo.png?raw=true "GenericDatasource")
 
 # GenericDatasource
 A Swift implementation of a generic datasource that you can use for table views.

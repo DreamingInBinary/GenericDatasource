@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    private var tv = UITableView()
+
+    @IBOutlet weak var tv: UITableView!
+
     private let data = ["One", "Two", "Three", "Four", "Five", "Six"]
     private var dataSource:GenericTVDatasource?
     
@@ -19,24 +21,18 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
         //Setup generic data source
-        dataSource = GenericTVDatasource(data: data, configBlock: {(cell:UITableViewCell, item:AnyObject) -> () in
+        dataSource = GenericTVDatasource(data: data, cellID: "Cell") { cell, item in
             //Do any cell configuration here
             cell.textLabel?.text = item as? String
-        }, cellID: "Cell")
+        }
         
         //Tableview setup
-        tv.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
+        tv.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tv.dataSource = dataSource
         tv.rowHeight = UITableViewAutomaticDimension
-        self.view.addSubview(tv)
-        
+
         //Tableview constraints
         tv.translatesAutoresizingMaskIntoConstraints = false
-        tv.leadingAnchor.constraintEqualToAnchor(self.view.leadingAnchor).active = true
-        tv.trailingAnchor.constraintEqualToAnchor(self.view.trailingAnchor).active = true
-        tv.topAnchor.constraintEqualToAnchor(self.view.topAnchor).active = true
-        tv.bottomAnchor.constraintEqualToAnchor(self.view.bottomAnchor).active = true
-        
     }
 }
 

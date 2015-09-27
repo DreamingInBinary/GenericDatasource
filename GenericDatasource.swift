@@ -17,7 +17,7 @@ public class GenericTVDatasource: NSObject, UITableViewDataSource
     private var data:[AnyObject] = [AnyObject]()
     
     //MARK: Initializers
-    required public init(data:[AnyObject], configBlock:(cell:UITableViewCell, item:AnyObject) -> (), cellID:String)
+    required public init(data:[AnyObject], cellID:String, configBlock:(cell:UITableViewCell, item:AnyObject) -> ())
     {
         self.data = data
         self.configurationBlock = configBlock

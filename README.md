@@ -9,10 +9,10 @@ This simple class has only one job, to move your datasource logic outside of you
 ###How do I use it?
 Simply set up your GenericDatasource class with the information it needs in its initializer.
 
-    genericDataSource = GenericTVDatasource(data: data, configBlock: {(cell:UITableViewCell, item:AnyObject) -> () in
+    genericDataSource = GenericTVDatasource(data: data, cellID: "Cell") { cell, item in
        //Do any cell configuration here
        cell.textLabel?.text = item as? String
-    }, cellID: "Cell")
+    }
 
 Whenever your table view is initialized, just set its datasource to your `GenericDatasouce` instance:
 

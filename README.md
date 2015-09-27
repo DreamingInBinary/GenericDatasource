@@ -23,4 +23,4 @@ And profit!
   - Ability to specify sections.
 
 ###Can I tweet at you?
-Please do, @jordanmorgan10. As the mantra goes - pull requests welcome.
+Please do, [@jordanmorgan10](https://twitter.com/jordanmorgan10). As the mantra goes - pull requests welcome.

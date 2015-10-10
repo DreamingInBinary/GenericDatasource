@@ -3,6 +3,9 @@
 # GenericDatasource
 A Swift implementation of a generic datasource that you can use for table views.
 
+####Snag it from Cocoapods
+    pod 'GenericDatasource', ~> '0.1.0'
+    
 ###What is it for?
 This simple class has only one job, to move your datasource logic outside of your controller. That's it :-). There are no tricks or anything special about it, other than it helps promote skinny view controllers.
 

@@ -3,7 +3,7 @@
 # GenericDatasource
 A Swift implementation of a generic datasource that you can use for table views.
 
-####Snag it from Cocoapods
+####Snag it from CocoaPods
     pod 'GenericDatasource', ~> '0.1.0'
     
 ###What is it for?
